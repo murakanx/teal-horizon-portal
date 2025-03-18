@@ -1,10 +1,11 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
+    --background: 180 15% 95%;
     --foreground: 222.2 84% 4.9%;
 
     --card: 0 0% 100%;
@@ -13,7 +14,7 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 222.2 47.4% 11.2%;
+    --primary: 174 55% 40%;
     --primary-foreground: 210 40% 98%;
 
     --secondary: 210 40% 96.1%;
@@ -22,7 +23,7 @@
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
 
-    --accent: 210 40% 96.1%;
+    --accent: 180 15% 95%;
     --accent-foreground: 222.2 47.4% 11.2%;
 
     --destructive: 0 84.2% 60.2%;
@@ -35,19 +36,12 @@
     --radius: 0.5rem;
 
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
     --sidebar-primary: 240 5.9% 10%;
-
     --sidebar-primary-foreground: 0 0% 98%;
-
     --sidebar-accent: 240 4.8% 95.9%;
-
     --sidebar-accent-foreground: 240 5.9% 10%;
-
     --sidebar-border: 220 13% 91%;
-
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
@@ -61,8 +55,8 @@
     --popover: 222.2 84% 4.9%;
     --popover-foreground: 210 40% 98%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 174 55% 40%;
+    --primary-foreground: 210 40% 98%;
 
     --secondary: 217.2 32.6% 17.5%;
     --secondary-foreground: 210 40% 98%;
@@ -79,9 +73,10 @@
     --border: 217.2 32.6% 17.5%;
     --input: 217.2 32.6% 17.5%;
     --ring: 212.7 26.8% 83.9%;
+    
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary: 174 55% 40%;
     --sidebar-primary-foreground: 0 0% 100%;
     --sidebar-accent: 240 3.7% 15.9%;
     --sidebar-accent-foreground: 240 4.8% 95.9%;
@@ -97,5 +92,115 @@
 
   body {
     @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
   }
+}
+
+@layer components {
+  .job-card {
+    @apply bg-white rounded-lg shadow-sm border border-gray-100 p-4 transition-all duration-300 hover:shadow-md hover:border-primary/20;
+  }
+  
+  .job-card-time {
+    @apply text-xs text-gray-500 bg-gray-100 px-2 py-1 rounded-full;
+  }
+  
+  .job-card-title {
+    @apply text-lg font-semibold text-gray-900 mb-1;
+  }
+  
+  .job-card-company {
+    @apply text-sm text-gray-600 mb-3;
+  }
+  
+  .job-card-info {
+    @apply flex flex-wrap gap-3 mt-2;
+  }
+  
+  .job-card-tag {
+    @apply inline-flex items-center text-xs text-gray-600 bg-gray-100 px-2 py-1 rounded-full;
+  }
+  
+  .job-card-btn {
+    @apply bg-primary text-white text-sm px-4 py-2 rounded-md hover:bg-primary-dark transition-colors;
+  }
+  
+  .page-header {
+    @apply bg-job-header text-white py-12 px-6 md:py-16 md:px-8;
+  }
+  
+  .section-title {
+    @apply text-2xl md:text-3xl font-bold mb-6;
+  }
+  
+  .form-input {
+    @apply w-full rounded-md border border-gray-200 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent;
+  }
+  
+  .button-primary {
+    @apply bg-primary hover:bg-primary-dark text-white font-medium py-2 px-4 rounded-md transition-colors;
+  }
+  
+  .button-secondary {
+    @apply bg-white hover:bg-gray-50 text-gray-800 font-medium py-2 px-4 border border-gray-200 rounded-md transition-colors;
+  }
+  
+  .button-outline {
+    @apply bg-transparent hover:bg-primary/10 text-primary font-medium py-2 px-4 border border-primary rounded-md transition-colors;
+  }
+  
+  .search-input {
+    @apply w-full bg-white rounded-md border border-gray-200 px-3 py-2 pl-9 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent;
+  }
+  
+  .filter-checkbox {
+    @apply w-4 h-4 rounded border-gray-300 text-primary focus:ring-primary/25;
+  }
+  
+  .filter-label {
+    @apply text-sm text-gray-700 ml-2;
+  }
+  
+  .pagination-item {
+    @apply w-8 h-8 flex items-center justify-center rounded-md border border-gray-200 mr-2 hover:bg-primary hover:text-white hover:border-primary transition-colors;
+  }
+  
+  .pagination-active {
+    @apply bg-primary text-white border-primary;
+  }
+}
+
+/* Custom animations */
+.fade-enter {
+  opacity: 0;
+}
+.fade-enter-active {
+  opacity: 1;
+  transition: opacity 300ms;
+}
+.fade-exit {
+  opacity: 1;
+}
+.fade-exit-active {
+  opacity: 0;
+  transition: opacity 300ms;
+}
+
+.slide-enter {
+  transform: translateY(20px);
+  opacity: 0;
+}
+.slide-enter-active {
+  transform: translateY(0);
+  opacity: 1;
+  transition: all 300ms;
+}
+.slide-exit {
+  transform: translateY(0);
+  opacity: 1;
+}
+.slide-exit-active {
+  transform: translateY(20px);
+  opacity: 0;
+  transition: all 300ms;
 }
