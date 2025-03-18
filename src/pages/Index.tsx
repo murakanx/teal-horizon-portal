@@ -18,18 +18,6 @@ const Index = () => {
         <HeroSection />
         
         <section className="py-16 bg-white">
-          <div className="container mx-auto px-4 text-center">
-            <div className="flex flex-wrap justify-center items-center gap-12">
-              <img src="/lovable-uploads/a21d18f2-4753-438c-8cd6-e72411928f5d.png" alt="Spotify" className="h-8 opacity-50" />
-              <img src="/lovable-uploads/a21d18f2-4753-438c-8cd6-e72411928f5d.png" alt="Slack" className="h-8 opacity-50" />
-              <img src="/lovable-uploads/a21d18f2-4753-438c-8cd6-e72411928f5d.png" alt="Adobe" className="h-8 opacity-50" />
-              <img src="/lovable-uploads/a21d18f2-4753-438c-8cd6-e72411928f5d.png" alt="Figma" className="h-8 opacity-50" />
-              <img src="/lovable-uploads/a21d18f2-4753-438c-8cd6-e72411928f5d.png" alt="Linear" className="h-8 opacity-50" />
-            </div>
-          </div>
-        </section>
-        
-        <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
             <div className="flex justify-between items-center mb-8">
               <h2 className="text-3xl font-bold">Recent Jobs Available</h2>
