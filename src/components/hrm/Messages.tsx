@@ -7,7 +7,7 @@ import { Search, PlusCircle, MessageSquare, Send } from "lucide-react";
 const messagesData = [
   { id: 1, sender: 'John Doe', content: 'Could you please review the updated project timeline?', time: '10:30 AM', unread: true },
   { id: 2, sender: 'HR Department', content: 'Reminder about the company meeting scheduled for tomorrow at 2 PM.', time: 'Yesterday', unread: false },
-  { id: 3, sender: 'Jane Smith', content: 'I've submitted the quarterly report for your review.', time: 'Yesterday', unread: false },
+  { id: 3, sender: 'Jane Smith', content: 'I\'ve submitted the quarterly report for your review.', time: 'Yesterday', unread: false },
   { id: 4, sender: 'Tech Support', content: 'Your request for new equipment has been approved.', time: 'May 25', unread: false },
   { id: 5, sender: 'Finance Department', content: 'Please submit your expense reports by the end of this month.', time: 'May 24', unread: false },
 ];
