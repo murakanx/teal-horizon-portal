@@ -3,7 +3,7 @@ import { Header } from "@/components/common/Header";
 import { Footer } from "@/components/common/Footer";
 import { JobFilters, FilterState } from "@/components/jobs/JobFilters";
 import { JobListing } from "@/components/jobs/JobListing";
-import { ChevronLeft, ChevronRight, SlidersHorizontal } from "lucide-react";
+import { ChevronLeft, ChevronRight, ChevronDown, SlidersHorizontal } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
 
