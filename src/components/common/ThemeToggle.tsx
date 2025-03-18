@@ -12,13 +12,16 @@ export const ThemeToggle = () => {
       size="icon" 
       onClick={toggleTheme}
       className="rounded-full w-9 h-9"
-      aria-label="Toggle theme"
+      aria-label={`Switch to ${theme === 'light' ? 'dark' : 'light'} mode`}
     >
       {theme === 'light' ? (
-        <Moon className="h-[1.2rem] w-[1.2rem] text-gray-700 transition-all" />
+        <Moon className="h-[1.2rem] w-[1.2rem] transition-all" />
       ) : (
-        <Sun className="h-[1.2rem] w-[1.2rem] text-gray-300 transition-all" />
+        <Sun className="h-[1.2rem] w-[1.2rem] transition-all" />
       )}
+      <span className="sr-only">
+        {theme === 'light' ? 'Dark' : 'Light'} mode
+      </span>
     </Button>
   );
 };

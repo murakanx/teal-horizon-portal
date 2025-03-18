@@ -26,8 +26,8 @@ export default {
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
 				primary: {
-					DEFAULT: '#2D9D8F',
-					foreground: '#FFFFFF',
+					DEFAULT: 'hsl(var(--primary))',
+					foreground: 'hsl(var(--primary-foreground))',
 					light: '#E6F2F0',
 					dark: '#236E65'
 				},
@@ -66,9 +66,9 @@ export default {
 					ring: 'hsl(var(--sidebar-ring))'
 				},
 				job: {
-					header: '#000000',
-					background: '#F0F5F5',
-					card: '#FFFFFF',
+					header: 'hsl(var(--background))',
+					background: 'hsl(var(--background))',
+					card: 'hsl(var(--card))',
 				}
 			},
 			borderRadius: {
